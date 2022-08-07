@@ -15,4 +15,4 @@ Noteworthy comments:
 3. Small animations added to the cards inside CollectionView, and in the detail view's bottom bar
 
 ## Demo
-Uploading RPReplay_Final1659895742.mov…
+![app](https://user-images.githubusercontent.com/17961880/183308383-acf6f4db-a6fc-4425-b2f9-73ef124bf878.gif)
