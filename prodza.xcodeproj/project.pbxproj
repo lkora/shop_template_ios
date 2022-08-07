@@ -62,7 +62,7 @@
 		8F9F4DCC289E6EDA00ACFF1C /* ProductNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNetworkManager.swift; sourceTree = "<group>"; };
 		8F9F4DCE289E978700ACFF1C /* ProductImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageView.swift; sourceTree = "<group>"; };
 		8F9F4DD0289F0A4A00ACFF1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8F9F4DD2289F0FF600ACFF1C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailViewController.swift; path = Controller/ProductDetailViewController.swift; sourceTree = "<group>"; };
+		8F9F4DD2289F0FF600ACFF1C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		8FB2A5BC289DC17B000625BC /* prodza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prodza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB2A5BF289DC17B000625BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FB2A5C1289DC17B000625BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 				8FB2A5C1289DC17B000625BC /* SceneDelegate.swift */,
 				8FB2A5C8289DC186000625BC /* Assets.xcassets */,
 				8FB2A5C5289DC17B000625BC /* Main.storyboard */,
-				8F9F4DD2289F0FF600ACFF1C /* ProductDetailViewController.swift */,
 				8FB2A5CA289DC186000625BC /* LaunchScreen.storyboard */,
 				8FB2A5CD289DC186000625BC /* Info.plist */,
 				8FDE4490289FC9A10087564E /* Fonts */,
@@ -178,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				8FB2A5C3289DC17B000625BC /* ProductListViewController.swift */,
+				8F9F4DD2289F0FF600ACFF1C /* ProductDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

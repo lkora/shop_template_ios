@@ -31,8 +31,8 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OBj-Ou-BHc">
                         <rect key="frame" x="15" y="15" width="134" height="170"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hNk-5h-ZXY" userLabel="ProductImageView" customClass="ProductImageView" customModule="prodza" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1.5" width="134" height="58.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hNk-5h-ZXY" userLabel="ProductImageView" customClass="ProductImageView" customModule="prodza" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="134" height="60"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-U7-EtQ">
                                 <rect key="frame" x="0.0" y="60" width="134" height="110"/>
@@ -88,7 +88,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="cart" catalog="system" width="128" height="102"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,6 +10,8 @@ import UIKit
 class ProductListViewController: UIViewController {
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
+    let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+
     var productsManagerNetworkManager = ProductNetworkManager()
     var products: [Product] = []
     var selectedItem = -1
@@ -24,7 +26,8 @@ class ProductListViewController: UIViewController {
         self.productsCollectionView.register(UINib(nibName: C.productCardViewCell, bundle: nil), forCellWithReuseIdentifier: C.productCardViewCell)
         
         productsManagerNetworkManager.delegate = self
-        productsManagerNetworkManager.fetchProducts()
+        
+        fetchProducts()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,6 +35,18 @@ class ProductListViewController: UIViewController {
             let vc = segue.destination as! ProductDetailViewController
             vc.product = self.products[selectedItem]
         }
+    }
+    
+    // Manages spinning circle and fetching products
+    func fetchProducts() {
+        // Spinner
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 128, height: 128)
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        activityIndicator.center = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2)
+        
+        self.view.addSubview(activityIndicator)
+        productsManagerNetworkManager.fetchProducts()
     }
 }
 
@@ -41,8 +56,8 @@ extension ProductListViewController: UICollectionViewDelegate,
     // Animation for loading in cells
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if collectionView == self.productsCollectionView {
-            let rorationTransform = CATransform3DTranslate(CATransform3DIdentity, -6, 15, 0)
-            cell.layer.transform = rorationTransform
+            let translationTransorm = CATransform3DTranslate(CATransform3DIdentity, -6, 15, 0)
+            cell.layer.transform = translationTransorm
             cell.alpha = 0
             UIView.animate(withDuration: 0.45) {
                 cell.layer.transform = CATransform3DIdentity
@@ -69,7 +84,7 @@ extension ProductListViewController: UICollectionViewDelegate,
         return cell
     }
     
-    // Setting the size
+    // Setting the size of cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var numberOfSets = CGFloat(2)
         if UIDevice.current.orientation.isLandscape {
@@ -93,13 +108,15 @@ extension ProductListViewController: ProductNetworkManagerDelegate {
     func didUpdateProducts(_ productNetworkManager: ProductNetworkManager, products: [Product]) {
         DispatchQueue.main.async {
             self.products = products
+            self.activityIndicator.stopAnimating()
             self.productsCollectionView.reloadData()
         }
     }
     
     func didFailWithError(error: Error) {
         print(error)
+        // Retry fetching data again
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { self.productsManagerNetworkManager.fetchProducts() }
+        
     }
-    
-    
 }

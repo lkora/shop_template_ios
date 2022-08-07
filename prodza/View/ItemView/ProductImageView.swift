@@ -20,13 +20,12 @@ class ProductImageView: UIImageView {
             }
         } else {
             let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-            activityIndicator.frame = CGRect(x: 0, y: 0, width: 64, height: 64)
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
             activityIndicator.hidesWhenStopped = true
             activityIndicator.startAnimating()
             activityIndicator.center = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
             
             self.addSubview(activityIndicator)
-            contentMode = .scaleAspectFit
             let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 guard let httpURLResponse = response as? HTTPURLResponse,
                         httpURLResponse.statusCode == 200,
