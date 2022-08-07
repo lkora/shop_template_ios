@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Monsterrat-Black.otf</string>
+		<string>Monsterrat-Bold.otf</string>
+		<string>Monsterrat-Light.otf</string>
+		<string>Monsterrat-Thin.otf</string>
+		<string>MonsterratAlternates-Black.otf</string>
+		<string>MonsterratAlternates-Bold.otf</string>
+		<string>MonsterratAlternates-Light.otf</string>
+		<string>MonsterratAlternates-Thin.otf</string>
+		<string>MonsterratAlternates-Regular.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

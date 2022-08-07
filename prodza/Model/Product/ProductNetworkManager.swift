@@ -54,7 +54,6 @@ struct ProductNetworkManager {
                                            product_type: productDecoded.product_type,
                                            product_colors: productDecoded.product_colors
                                           ))
-                debugPrint(productDecoded.product_colors)
             }
             return productList
         } catch {

@@ -12,7 +12,7 @@ class ProductListViewController: UIViewController {
     
     var productsManagerNetworkManager = ProductNetworkManager()
     var products: [Product] = []
-    var selectedItem = 0
+    var selectedItem = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,22 @@ class ProductListViewController: UIViewController {
     }
 }
 
-// MARK: - UICollectionView - Data source
+// MARK: - UICollectionView - Delegate, Data source
 extension ProductListViewController: UICollectionViewDelegate,
                                         UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    // Animation for loading in cells
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if collectionView == self.productsCollectionView {
+            let rorationTransform = CATransform3DTranslate(CATransform3DIdentity, -6, 15, 0)
+            cell.layer.transform = rorationTransform
+            cell.alpha = 0
+            UIView.animate(withDuration: 0.45) {
+                cell.layer.transform = CATransform3DIdentity
+                cell.alpha = 1.0
+            }
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.products.count
     }
