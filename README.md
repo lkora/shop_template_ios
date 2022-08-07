@@ -13,3 +13,6 @@ Noteworthy comments:
 2. Images are also downloaded and showed asynchronously
 3. Caching of images has been done using NSCache
 3. Small animations added to the cards inside CollectionView, and in the detail view's bottom bar
+
+## Demo
+Uploading RPReplay_Final1659895742.mov…
