@@ -63,7 +63,7 @@
 		8F9F4DCE289E978700ACFF1C /* ProductImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageView.swift; sourceTree = "<group>"; };
 		8F9F4DD0289F0A4A00ACFF1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F9F4DD2289F0FF600ACFF1C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
-		8FB2A5BC289DC17B000625BC /* prodza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prodza.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB2A5BC289DC17B000625BC /* Prodavnica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prodavnica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB2A5BF289DC17B000625BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FB2A5C1289DC17B000625BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8FB2A5C3289DC17B000625BC /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		8FB2A5B3289DC17B000625BC = {
 			isa = PBXGroup;
 			children = (
-				8FB2A5BE289DC17B000625BC /* prodza */,
+				8FB2A5BE289DC17B000625BC /* Prodavnica */,
 				8FB2A5BD289DC17B000625BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,12 +134,12 @@
 		8FB2A5BD289DC17B000625BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FB2A5BC289DC17B000625BC /* prodza.app */,
+				8FB2A5BC289DC17B000625BC /* Prodavnica.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8FB2A5BE289DC17B000625BC /* prodza */ = {
+		8FB2A5BE289DC17B000625BC /* Prodavnica */ = {
 			isa = PBXGroup;
 			children = (
 				8FB2A5D5289DC230000625BC /* Controller */,
@@ -153,7 +153,7 @@
 				8FB2A5CD289DC186000625BC /* Info.plist */,
 				8FDE4490289FC9A10087564E /* Fonts */,
 			);
-			path = prodza;
+			path = Prodavnica;
 			sourceTree = "<group>";
 		};
 		8FB2A5D3289DC1B2000625BC /* Model */ = {
@@ -247,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8FB2A5BB289DC17B000625BC /* prodza */ = {
+		8FB2A5BB289DC17B000625BC /* Prodavnica */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FB2A5D0289DC186000625BC /* Build configuration list for PBXNativeTarget "prodza" */;
+			buildConfigurationList = 8FB2A5D0289DC186000625BC /* Build configuration list for PBXNativeTarget "Prodavnica" */;
 			buildPhases = (
 				8FB2A5B8289DC17B000625BC /* Sources */,
 				8FB2A5B9289DC17B000625BC /* Frameworks */,
@@ -259,9 +259,9 @@
 			);
 			dependencies = (
 			);
-			name = prodza;
+			name = Prodavnica;
 			productName = prodza;
-			productReference = 8FB2A5BC289DC17B000625BC /* prodza.app */;
+			productReference = 8FB2A5BC289DC17B000625BC /* Prodavnica.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -279,7 +279,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8FB2A5B7289DC17B000625BC /* Build configuration list for PBXProject "prodza" */;
+			buildConfigurationList = 8FB2A5B7289DC17B000625BC /* Build configuration list for PBXProject "Prodavnica" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -292,7 +292,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8FB2A5BB289DC17B000625BC /* prodza */,
+				8FB2A5BB289DC17B000625BC /* Prodavnica */,
 			);
 		};
 /* End PBXProject section */
@@ -509,7 +509,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KRK6S63FNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = prodza/Info.plist;
+				INFOPLIST_FILE = Prodavnica/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Prodavnica;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -520,7 +521,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lkorica.prodza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lkorica.prodavnica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -537,7 +538,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KRK6S63FNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = prodza/Info.plist;
+				INFOPLIST_FILE = Prodavnica/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Prodavnica;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -548,7 +550,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lkorica.prodza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lkorica.prodavnica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -559,7 +561,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8FB2A5B7289DC17B000625BC /* Build configuration list for PBXProject "prodza" */ = {
+		8FB2A5B7289DC17B000625BC /* Build configuration list for PBXProject "Prodavnica" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FB2A5CE289DC186000625BC /* Debug */,
@@ -568,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FB2A5D0289DC186000625BC /* Build configuration list for PBXNativeTarget "prodza" */ = {
+		8FB2A5D0289DC186000625BC /* Build configuration list for PBXNativeTarget "Prodavnica" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FB2A5D1289DC186000625BC /* Debug */,
